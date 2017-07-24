@@ -2,19 +2,25 @@
 A small library that support 2 methods to call brain.
 
 ## ## Installation
-`npm install @duyhtq/brain-sdk-nodejs`
+`npm install @duyhtq/brain-sdk`
 
 ## ## Usage
 var brain = require('');
 
-## #### sendSensor
+## ## - sendSensor
+```javascript
 var jsonData = {a:1,b:2,c:3};
 brain.sendSensor(jsonData);
+```
 
-## #### sendSensorForResult
+## ## - sendSensorForResult
+```javascript
 var jsonData = {a:1,b:2,c:3};
 brain.sendSensorForResult(jsonData, function(err, data){
   console.log(data);
 });
+```
 
+## ## Tests
+`npm run test`
 
