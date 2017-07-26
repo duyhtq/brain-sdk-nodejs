@@ -1,7 +1,7 @@
 {
-  "name": "brain-sdk",
-  "version": "0.0.3",
-  "description": "SDK for Brain",
+  "name": "sd3-sdk",
+  "version": "0.0.1",
+  "description": "SDK for SmartDesk 3",
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec"
@@ -14,7 +14,7 @@
     "brain",
     "sdk"
   ],
-  "author": "Duy Huynh <magic.mike@gmail.com> (https://www.autonomous.ai)",
+  "author": "Glassy Team <glassyteam@gmail.com> (https://www.autonomous.ai)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/duyhtq/brain-sdk-nodejs/issues"
