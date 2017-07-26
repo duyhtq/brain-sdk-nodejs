@@ -1,6 +1,6 @@
 {
   "name": "brain-sdk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "SDK for Brain",
   "main": "index.js",
   "scripts": {
