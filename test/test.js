@@ -16,7 +16,7 @@ puller.on('message', function(msg){
     globalResult = msg
 });
 
-describe('#numFormatter', function() {
+describe('#sendSensor', function() {
     it('should receive msg', function() {
         sdk.sendSensor('testing');
         setTimeout(function(){
