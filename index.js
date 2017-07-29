@@ -6,9 +6,6 @@ var configs = require('./configs');
 
 var SENSORS_PUSH_PULL  = configs.SENSORS_PUSH_PULL
 
-var pusher = zmq.socket('push');
-pusher.bindSync(SENSORS_PUSH_PULL);
-
 var formatJsonData = function(data){
     if (typeof data !== 'string') {
         data = JSON.stringify(data);
@@ -23,7 +20,12 @@ var formatJsonData = function(data){
  * @return {string}
  */
 module.exports.sendSensor = function(jsonData) {
+    var pusher = zmq.socket('push');
+    pusher.bindSync(SENSORS_PUSH_PULL);
     pusher.send(formatJsonData(jsonData));
+    setTimeout(function(){
+        pusher.close();
+    }, 500);
 };
 
 /**
