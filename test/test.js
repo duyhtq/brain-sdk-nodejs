@@ -9,7 +9,7 @@ var expect = require('chai').expect;
 var sdk = require('../index');
 
 var puller = zmq.socket('pull');
-puller.connect(SENSORS_PUSH_PULL);
+puller.bindSync(SENSORS_PUSH_PULL);
 
 var globalResult = '';
 puller.on('message', function(msg){

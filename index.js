@@ -21,11 +21,8 @@ var formatJsonData = function(data){
  */
 module.exports.sendSensor = function(jsonData) {
     var pusher = zmq.socket('push');
-    pusher.bindSync(SENSORS_PUSH_PULL);
+    pusher.connect(SENSORS_PUSH_PULL);
     pusher.send(formatJsonData(jsonData));
-    setTimeout(function(){
-        pusher.close();
-    }, 500);
 };
 
 /**
