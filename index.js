@@ -23,6 +23,7 @@ module.exports.sendSensor = function(jsonData) {
     var pusher = zmq.socket('push');
     pusher.connect(SENSORS_PUSH_PULL);
     pusher.send(formatJsonData(jsonData));
+    pusher.close();
 };
 
 /**
