@@ -1,6 +1,6 @@
 {
   "name": "sd3-sdk",
-  "version": "0.0.9b",
+  "version": "0.0.9",
   "description": "SDK for SmartDesk 3",
   "main": "index.js",
   "scripts": {
